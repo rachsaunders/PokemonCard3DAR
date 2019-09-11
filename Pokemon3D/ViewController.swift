@@ -36,6 +36,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             configuration.trackingImages = imageToTrack
 
+            // Amount of pokemon cards to track at one time
             configuration.maximumNumberOfTrackedImages = 1
             
             print("Images Successfully Added")
