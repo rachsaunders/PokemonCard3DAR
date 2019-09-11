@@ -65,7 +65,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             // Plane will be the width and height of the image reference aka the pokemon card
             let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
             
+            // makes the plane transparent and a bit white
+            plane.firstMaterial?.diffuse.contents =  UIColor(white: 1.0, alpha: 0.5)
+            
             let planeNode = SCNNode(geometry: plane)
+            
+            // turns the plane 90 anticlockwise
+            planeNode.eulerAngles.x = -Float.pi / 2
             
             node .addChildNode(planeNode)
             
